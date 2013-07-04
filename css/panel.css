@@ -1,0 +1,100 @@
+@font-face { font-family: 'IconicFill'; src: url('iconic_fill.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+html, body {
+	width:100%;height:100%;
+	margin:0;padding:0;
+	font-family: "Lucida Grande", Lucida, sans-serif;
+	font-size: 14px;
+	color: #6e7480;
+}
+#generator {
+	position:absolute;
+	top:0;
+	width:100%;
+	height: 57px;
+	border-bottom: 2px solid #a3a3a3;
+	text-align: center;
+}
+#generator button {
+	margin: 12px;
+	line-height: 25px;
+	font-size: 14px;
+}
+#testoutput {
+	position:absolute;
+	top:59px;
+	bottom:30%;
+	left:0;right:0;
+	border-bottom: 1px solid #f5f3f1;
+	white-space: pre;
+	overflow-y: scroll;
+	border-bottom: 2px solid #a3a3a3;
+	line-height: 2;
+	padding: 20px 20px 100px 20px;
+}
+#selectoroutput {
+	position:absolute;
+	top:70%;
+	padding: 20px;
+	bottom:0;
+	overflow-y: scroll;
+	left:0;right:0;
+}
+a {
+	display: block;
+	position:absolute;
+	text-align:center;
+	color: white;
+	width:111px;
+	font-size: 13px;
+	text-decoration: none;
+	right:0;
+	height:57px;
+	line-height: 57px;
+}
+a span {font-size:16px;font-family:"IconicFill";display:inline-block; margin-left:0.3em;}
+#generator a {
+	background: #2d9cc6;
+	top: 0;
+	bottom:0;
+}
+#exportfeature a {
+	bottom: 30%;
+	background: #dd7252;
+display: none;
+}
+#exportselectors a {
+	bottom: 0;
+	background: #a7636e;
+	display: none;
+}
+#addscenario a {
+	bottom: 30%;
+	background: #62b29a;
+	right:111px;
+	display: none;
+}
+.title {
+	color: black;
+}
+.editable {
+	border: 1px solid #ebebeb;
+	padding: 0.2em 0.6em;
+}
+#prompt {
+	position: absolute;
+	background:white;
+	display: none;
+	text-align: center;
+}
+#prompt.show {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+#prompt form {
+	display: table-cell;
+	vertical-align: middle;
+}
+#prompt p, input {
+	font-size:1.5em;
+}

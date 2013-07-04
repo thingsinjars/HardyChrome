@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GhostStory Cucumber CSS tests</title>
+	<link href="css/panel.css" rel="stylesheet">
+	<link href="css/alertify.core.css" rel="stylesheet">
+	<link href="css/alertify.default.css" rel="stylesheet">
+</head>
+<body>
+	<div id="generator">
+		<button id="generatetest">Create a story</button>
+		<a href="http://csste.st/tools/ghoststory.html" target="_blank">Help<span>?</span></a>
+	</div>
+	<div id="testoutput">
+	</div>
+	<div id="exportfeature">
+		<a href="exportfeature">Export<span>&#xE042;</span></a>
+	</div>
+	<div id="addscenario">
+		<a href="addscenario">Add scenario<span>&#x2795;</span></a>
+	</div>
+	<div id="selectoroutput">
+	</div>
+	<div id="exportselectors"><a href="exportselectors">Export<span>&#xE042;</span></a></div>
+	<div id="prompt">
+		<form>
+			<p>Name of feature?</p>
+			<input type="text" id="promptvalue" autocomplete="off">
+			<div>
+				<button class="ok">OK</button>
+				<button class="cancel">Cancel</button>
+			</div>
+		<form>
+	</div>
+	<script src="lib/alertify.min.js"></script>
+	<script src="cucumber/feature.js"></script>
+	<script src="messaging.js"></script>
+	<script src="panel.js"></script>
+</body>
+</html>
