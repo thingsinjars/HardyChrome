@@ -57,7 +57,7 @@ var ghost = {};
         feature = makeNewFeature();
 
         // prompt dialog
-        if (false) {
+        if (true) {
             prompter("Name of feature?", function(e, str) {
                 feature.title = str;
                 if (e) {
