@@ -1,6 +1,6 @@
 {
     "name": "Hardy",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Makes making tests easier - a helper extension for Hardy CSS testing",
     "icons": { 
         "16": "images/icon16.png",
