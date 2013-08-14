@@ -176,7 +176,9 @@ var cucumber = {};
             returnable[selectors[i].name] = selectors[i].path;
         }
 
-        return JSON.stringify(returnable);
+
+
+        return "module.exports = " + JSON.stringify(returnable);
     }
 
     function createSelectorsList(selected, id) {
