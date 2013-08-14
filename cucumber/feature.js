@@ -22,9 +22,9 @@ var cucumber = {};
         }
         for (i = 0, l = features.length; i < l; i++) {
             outputFeature.push(format('title', 'Feature: ', exportFormat));
-            outputFeature.push(format('editable', features[i].title, exportFormat));
+            outputFeature.push(format('editable title', features[i].title, exportFormat));
             outputFeature.push(crlf);
-            outputFeature.push(format('editable', features[i].description, exportFormat));
+            outputFeature.push(format('editable title', features[i].description, exportFormat));
             outputFeature.push(crlf);
             scenarios = features[i].scenarios;
             for (_i = 0, _l = scenarios.length; _i < _l; _i++) {
@@ -32,7 +32,7 @@ var cucumber = {};
                 outputFeature.push(crlf);
                 outputFeature.push(tabs(depth));
                 outputFeature.push(format('title', "Scenario: ", exportFormat));
-                outputFeature.push(format('editable', scenarios[_i].title, exportFormat));
+                outputFeature.push(format('editable title', scenarios[_i].title, exportFormat));
                 outputFeature.push(crlf);
                 depth = 4;
                 id = '_' + i + '_' + _i;
@@ -84,9 +84,11 @@ var cucumber = {};
                         formatString = format('editable', variables[i], exportFormat);
                         break;
                     default:
-                        formatString = '"' + variables[i] + '"';
+                        formatString = variables[i];
                 }
                 step = step.replace(/\[\w*\]/, formatString);
+                step = step.replace('  ', ' ');
+
             }
         }
         return step;
@@ -139,7 +141,7 @@ var cucumber = {};
 
     function format(formatType, data, exportFormat) {
         if (exportFormat) {
-            if (formatType === 'title') {
+            if (formatType === 'title' || formatType === 'editable title') {
                 return data;
             }
             return '"' + data + '"';
